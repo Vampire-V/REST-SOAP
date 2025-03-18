@@ -1,0 +1,116 @@
+### การ Deploy .NET 8 Web API ขึ้น **IIS Server**
+
+ด้านล่างเป็นขั้นตอนโดยละเอียดสำหรับการนำ Web API ที่พัฒนาด้วย .NET 8 ขึ้น **IIS Server**
+
+---
+
+### **1. ติดตั้ง .NET Hosting Bundle**
+ก่อนที่จะสามารถรัน Web API บน IIS ได้ คุณต้องติดตั้ง **.NET Hosting Bundle** บนเครื่อง Server ที่ติดตั้ง IIS
+
+1. ดาวน์โหลด **.NET Hosting Bundle** จาก [Microsoft Downloads](https://dotnet.microsoft.com/download).
+2. เลือกเวอร์ชันของ .NET Hosting Bundle ที่ตรงกับ .NET Runtime เวอร์ชันที่แอปพลิเคชันของคุณใช้ (ในกรณีนี้คือ .NET 8).
+3. ติดตั้ง `Hosting Bundle` บน Server.
+
+---
+
+### **2. เปิดใช้งาน IIS**
+ตรวจสอบว่า IIS ถูกเปิดใช้งานแล้ว หากยังไม่ได้เปิดให้ดำเนินการดังนี้:
+
+1. **เปิด Control Panel > Programs > Turn Windows features on or off.**
+2. ติ๊กเลือก:
+   - **Internet Information Services**
+   - **Web Management Tools**
+   - **World Wide Web Services**
+3. คลิก **OK** เพื่อเปิดใช้งาน.
+
+---
+
+### **3. เปิดใช้งาน ASP.NET Core Module**
+หลังจากติดตั้ง .NET Hosting Bundle, **ASP.NET Core Module** จะถูกติดตั้งและกำหนดค่าให้ IIS รองรับการทำงานของ .NET Core/.NET 8 Web API โดยอัตโนมัติ.
+
+---
+
+### **4. เตรียมไฟล์สำหรับ Deploy**
+1. เปิด Command Prompt หรือ Terminal.
+2. ไปยังโฟลเดอร์โปรเจกต์ของคุณ.
+3. รันคำสั่งเพื่อ Publish แอป:
+   ```bash
+   dotnet publish -c Release -o ./publish
+   ```
+   คำสั่งนี้จะสร้างไฟล์แอปพลิเคชันทั้งหมดในโฟลเดอร์ `publish`.
+
+---
+
+### **5. คัดลอกไฟล์ไปยัง IIS Server**
+1. นำโฟลเดอร์ `publish` ที่ได้จากขั้นตอนที่แล้วไปยังเครื่อง Server.
+2. วางโฟลเดอร์ในตำแหน่งที่ต้องการ (เช่น `C:\inetpub\wwwroot\DemoSAP`).
+
+---
+
+### **6. เพิ่มเว็บไซต์ใน IIS**
+1. เปิด **IIS Manager** (`inetmgr`).
+2. คลิกขวาที่ **Sites** > **Add Website...**.
+3. กำหนดค่า:
+   - **Site name**: เช่น `DemoSAP`.
+   - **Physical path**: ชี้ไปยังโฟลเดอร์ที่มีไฟล์ `publish` (เช่น `C:\inetpub\wwwroot\DemoSAP`).
+   - **Binding**:
+     - เลือก **http**.
+     - ระบุ **Port** (เช่น `5000` หรือพอร์ตที่ต้องการ).
+4. คลิก **OK**.
+
+---
+
+### **7. กำหนดสิทธิ์สำหรับโฟลเดอร์**
+ให้สิทธิ์ `IIS_IUSRS` บนโฟลเดอร์ที่เก็บไฟล์:
+1. คลิกขวาที่โฟลเดอร์ที่เก็บไฟล์ (เช่น `C:\inetpub\wwwroot\DemoSAP`).
+2. เลือก **Properties** > **Security** > **Edit**.
+3. คลิก **Add** > เพิ่ม **IIS_IUSRS** > คลิก **OK**.
+4. ให้สิทธิ์ `Read & Execute`.
+
+---
+
+### **8. ตั้งค่า Application Pool**
+1. ใน **IIS Manager**, ไปที่ **Application Pools**.
+2. ตรวจสอบว่า Application Pool ของเว็บไซต์ใช้:
+   - **.NET CLR Version**: **No Managed Code**.
+   - **Pipeline Mode**: **Integrated**.
+
+---
+
+### **9. ทดสอบการใช้งาน**
+1. เปิดเบราว์เซอร์และเข้า URL:
+   ```
+   http://<server-ip>:<port>
+   ```
+   เช่น:
+   ```
+   http://localhost:5000
+   ```
+2. API ควรแสดงผลและทำงานได้.
+
+---
+
+### **10. ตรวจสอบข้อผิดพลาด (ถ้ามี)**
+หาก API ไม่ทำงาน:
+1. ตรวจสอบ Log ใน **Event Viewer**:
+   - **Windows Logs > Application**.
+   - ดู Error จาก **ASP.NET Core Module**.
+2. ตรวจสอบว่าไฟล์ `web.config` ในโฟลเดอร์ `publish` ถูกต้อง.
+
+---
+
+### **ตัวอย่างไฟล์ `web.config`**
+ไฟล์ `web.config` ถูกสร้างอัตโนมัติในโฟลเดอร์ `publish`. ตัวอย่างเนื้อหา:
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.webServer>
+    <handlers>
+      <add name="aspNetCore" path="*" verb="*" modules="AspNetCoreModuleV2" resourceType="Unspecified" />
+    </handlers>
+    <aspNetCore processPath="dotnet" arguments="DemoSAP.dll" stdoutLogEnabled="false" stdoutLogFile=".\logs\stdout" hostingModel="InProcess" />
+  </system.webServer>
+</configuration>
+```
+
+---

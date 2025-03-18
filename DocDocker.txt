@@ -1,0 +1,164 @@
+### การ Deploy .NET 8 Web API ด้วย Docker
+
+ด้านล่างนี้เป็นขั้นตอนสำหรับการ Deploy Web API ขึ้น **Docker** โดยใช้ไฟล์ `Dockerfile` และ `docker-compose.yml` เพื่อให้การรันและจัดการง่ายขึ้น
+
+---
+
+### **1. สร้าง `Dockerfile`**
+
+สร้างไฟล์ `Dockerfile` ในโฟลเดอร์รากของโปรเจกต์ (ที่มี `.csproj`) ด้วยเนื้อหาดังนี้:
+
+```dockerfile
+# ใช้ .NET SDK สำหรับ Build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /app
+
+# คัดลอกไฟล์ทั้งหมดและ Restore Dependencies
+COPY *.csproj .
+RUN dotnet restore
+
+# คัดลอกไฟล์ทั้งหมดและ Build
+COPY . .
+RUN dotnet publish -c Release -o /out
+
+# ใช้ .NET Runtime สำหรับรันแอป
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+WORKDIR /app
+COPY --from=build /out .
+
+# เปิดพอร์ต 80 สำหรับ Web API
+EXPOSE 80
+
+# คำสั่งเริ่มต้น
+ENTRYPOINT ["dotnet", "YourProjectName.dll"]
+```
+
+**หมายเหตุ**:
+- เปลี่ยน `YourProjectName.dll` เป็นชื่อจริงของไฟล์ `.dll` ของคุณที่สร้างในขั้นตอน `publish`.
+
+---
+
+### **2. สร้าง `docker-compose.yml`**
+
+สร้างไฟล์ `docker-compose.yml` เพื่อจัดการคอนเทนเนอร์ Web API:
+
+```yaml
+version: '3.8'
+services:
+  webapi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80" # แมปพอร์ต 8080 ของโฮสต์ไปยังพอร์ต 80 ในคอนเทนเนอร์
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+```
+
+---
+
+### **3. Build และ Run Docker Container**
+
+#### **3.1 สร้าง Docker Image**
+รันคำสั่งเพื่อสร้าง Image:
+```bash
+docker-compose build
+```
+
+#### **3.2 รันคอนเทนเนอร์**
+หลังจากสร้าง Image สำเร็จ รันคอนเทนเนอร์:
+```bash
+docker-compose up -d
+```
+
+คอนเทนเนอร์จะเริ่มต้นและ API จะพร้อมให้ใช้งานที่:
+```
+http://localhost:8080
+```
+
+---
+
+### **4. ตรวจสอบการทำงาน**
+
+#### **4.1 เช็คสถานะคอนเทนเนอร์**
+ดูว่าคอนเทนเนอร์กำลังรันอยู่หรือไม่:
+```bash
+docker ps
+```
+
+คุณควรเห็นคอนเทนเนอร์ที่รันอยู่พร้อมพอร์ต:
+```
+CONTAINER ID   IMAGE             PORTS
+xxxxxxxxxxxx   yourproject_webapi   0.0.0.0:8080->80/tcp
+```
+
+#### **4.2 ทดสอบ API**
+เปิดเบราว์เซอร์ที่:
+```
+http://localhost:8080/swagger
+```
+
+---
+
+### **5. ตรวจสอบ Log**
+
+หาก API ไม่ทำงาน ให้ดู Log ของคอนเทนเนอร์:
+```bash
+docker logs <CONTAINER_ID>
+```
+
+---
+
+### **6. Push ไปยัง Docker Hub (ถ้าต้องการ Deploy)**
+หากต้องการ Deploy ไปยัง Server อื่น คุณสามารถ Push Image ไปยัง Docker Hub:
+
+1. Login เข้าสู่ Docker Hub:
+   ```bash
+   docker login
+   ```
+
+2. ตั้งชื่อ Image:
+   ```bash
+   docker tag yourproject_webapi your-dockerhub-username/yourproject_webapi:latest
+   ```
+
+3. Push Image:
+   ```bash
+   docker push your-dockerhub-username/yourproject_webapi:latest
+   ```
+
+4. บน Server ที่ต้องการ Deploy, รันคำสั่ง:
+   ```bash
+   docker pull your-dockerhub-username/yourproject_webapi:latest
+   docker run -d -p 8080:80 your-dockerhub-username/yourproject_webapi:latest
+   ```
+
+---
+
+### **7. การกำหนดค่าพิเศษ (Optional)**
+
+#### **7.1 เพิ่ม Multi-Stage Build สำหรับลดขนาด Image**
+Dockerfile ที่แสดงด้านบนใช้ Multi-Stage Build อยู่แล้ว ซึ่งช่วยลดขนาด Image โดยใช้เฉพาะ Runtime (`mcr.microsoft.com/dotnet/aspnet`).
+
+#### **7.2 ปรับพอร์ตใน `docker-compose.yml`**
+ถ้าต้องการเปลี่ยนพอร์ต:
+```yaml
+ports:
+  - "5000:80" # แมปพอร์ต 5000 ของโฮสต์ไปยังพอร์ต 80 ในคอนเทนเนอร์
+```
+
+จากนั้น API จะทำงานที่:
+```
+http://localhost:5000
+```
+
+---
+
+### **สรุป**
+
+1. สร้างไฟล์ `Dockerfile` และ `docker-compose.yml`.
+2. รันคำสั่ง:
+   ```bash
+   docker-compose up --build
+   ```
+3. เปิด `http://localhost:8080` เพื่อดู Swagger UI.

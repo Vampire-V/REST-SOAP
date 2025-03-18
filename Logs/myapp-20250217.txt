@@ -1,0 +1,44 @@
+2025-02-17T13:39:54.9664634+07:00  [INF] Now listening on: "https://localhost:7249" (d826f4b8)
+2025-02-17T13:39:54.9707643+07:00  [INF] Now listening on: "http://localhost:5257" (d826f4b8)
+2025-02-17T13:39:55.0429260+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2025-02-17T13:39:55.0457818+07:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2025-02-17T13:39:55.0477127+07:00  [INF] Content root path: "D:\personal\git\DemoSAP" (cc26f24e)
+2025-02-17T13:39:55.6961085+07:00 0HNAF3NHVENAE:00000001 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:7249""""/index.html""" - null null (d509f86a)
+2025-02-17T13:39:55.9605408+07:00 0HNAF3NHVENAE:00000001 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:7249""""/index.html""" - 200 null "text/html;charset=utf-8" 273.5197ms (74253ad3)
+2025-02-17T13:39:56.0039238+07:00 0HNAF3NHVENAE:00000003 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:7249""""/_framework/aspnetcore-browser-refresh.js""" - null null (d509f86a)
+2025-02-17T13:39:56.0039239+07:00 0HNAF3NHVENAE:00000005 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:7249""""/_vs/browserLink""" - null null (d509f86a)
+2025-02-17T13:39:56.0116550+07:00 0HNAF3NHVENAE:00000003 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:7249""""/_framework/aspnetcore-browser-refresh.js""" - 200 13750 "application/javascript; charset=utf-8" 7.8532ms (74253ad3)
+2025-02-17T13:39:56.0630770+07:00 0HNAF3NHVENAE:00000005 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:7249""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 59.3566ms (74253ad3)
+2025-02-17T13:39:56.2870174+07:00 0HNAF3NHVENAE:00000007 [INF] Request starting "HTTP/2" "GET" "https"://"localhost:7249""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2025-02-17T13:39:56.3060492+07:00 0HNAF3NHVENAE:00000007 [INF] Request finished "HTTP/2" "GET" "https"://"localhost:7249""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 19.3895ms (74253ad3)
+2025-02-17T13:40:01.0562124+07:00 0HNAF3NHVENAE:00000009 [INF] Request starting "HTTP/2" "POST" "https"://"localhost:7249""""/api/Sap/CreateItem""" - null 0 (d509f86a)
+2025-02-17T13:40:01.0599605+07:00 0HNAF3NHVENAE:00000009 [INF] CORS policy execution successful. (5409d6ef)
+2025-02-17T13:40:01.0811989+07:00 0HNAF3NHVENAE:00000009 [INF] Executing endpoint '"DemoSAP.Controllers.SapController.CreateItem (DemoSAP)"' (500cc934)
+2025-02-17T13:40:01.0957231+07:00 0HNAF3NHVENAE:00000009 [INF] Route matched with "{action = \"CreateItem\", controller = \"Sap\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateItem()" on controller "DemoSAP.Controllers.SapController" ("DemoSAP"). (122b2fdf)
+2025-02-17T13:40:01.1127143+07:00 0HNAF3NHVENAE:00000009 [INF] {
+  "Method": "POST",
+  "Headers": {
+    "Accept": "*/*",
+    "Host": "localhost:7249",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9,th;q=0.8",
+    "Cookie": "_fbp=fb.0.1724225726732.548074398465159582; G_ENABLED_IDPS=google",
+    "Origin": "https://localhost:7249",
+    "Referer": "https://localhost:7249/index.html",
+    "Content-Length": "0",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Not(A:Brand\u0022;v=\u002299\u0022, \u0022Google Chrome\u0022;v=\u0022133\u0022, \u0022Chromium\u0022;v=\u0022133\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "sec-fetch-site": "same-origin",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-dest": "empty",
+    "priority": "u=1, i"
+  },
+  "QueryParams": {},
+  "Body": ""
+} (86e9aedf)
+2025-02-17T13:40:01.1180971+07:00 0HNAF3NHVENAE:00000009 [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2025-02-17T13:40:01.1237776+07:00 0HNAF3NHVENAE:00000009 [INF] Executed action "DemoSAP.Controllers.SapController.CreateItem (DemoSAP)" in 24.2894ms (afa2e885)
+2025-02-17T13:40:01.1238947+07:00 0HNAF3NHVENAE:00000009 [INF] Executed endpoint '"DemoSAP.Controllers.SapController.CreateItem (DemoSAP)"' (99874f2b)
+2025-02-17T13:40:01.1243688+07:00 0HNAF3NHVENAE:00000009 [INF] Request finished "HTTP/2" "POST" "https"://"localhost:7249""""/api/Sap/CreateItem""" - 200 null "application/json; charset=utf-8" 68.6123ms (74253ad3)

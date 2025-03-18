@@ -1,0 +1,291 @@
+2024-12-12T13:36:03.5547679+07:00  [INF] Now listening on: "http://localhost:5257" (d826f4b8)
+2024-12-12T13:36:03.5583902+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-12-12T13:36:03.5588266+07:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-12-12T13:36:03.5588628+07:00  [INF] Content root path: "D:\personal\git\DemoSAP" (cc26f24e)
+2024-12-12T13:36:03.7224009+07:00 0HN8QET02TVV4:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/index.html""" - null null (d509f86a)
+2024-12-12T13:36:03.8039164+07:00 0HN8QET02TVV4:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 82.6385ms (74253ad3)
+2024-12-12T13:36:03.9380186+07:00 0HN8QET02TVV4:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-12-12T13:36:04.0246711+07:00 0HN8QET02TVV4:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 86.6596ms (74253ad3)
+2024-12-12T13:36:29.9189732+07:00 0HN8QET02TVV4:00000003 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/api/Sap""" - null null (d509f86a)
+2024-12-12T13:36:29.9300154+07:00 0HN8QET02TVV4:00000003 [WRN] Failed to determine the https port for redirect. (ca76cc21)
+2024-12-12T13:36:29.9323378+07:00 0HN8QET02TVV4:00000003 [INF] Executing endpoint '"DemoSAP.Controllers.SapController.GetItems (DemoSAP)"' (500cc934)
+2024-12-12T13:36:29.9503089+07:00 0HN8QET02TVV4:00000003 [INF] Route matched with "{action = \"GetItems\", controller = \"Sap\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetItems()" on controller "DemoSAP.Controllers.SapController" ("DemoSAP"). (122b2fdf)
+2024-12-12T13:36:29.9680765+07:00 0HN8QET02TVV4:00000003 [INF] {
+  "Method": "GET",
+  "Headers": {
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Host": "localhost:5257",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en,th-TH;q=0.9,th;q=0.8",
+    "Cookie": "NEXT_LOCALE=th",
+    "Referer": "http://localhost:5257/swagger/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Google Chrome\u0022;v=\u0022131\u0022, \u0022Chromium\u0022;v=\u0022131\u0022, \u0022Not_A Brand\u0022;v=\u002224\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Dest": "empty"
+  },
+  "QueryParams": {},
+  "Body": null
+} (43814027)
+2024-12-12T13:36:29.9733434+07:00 0HN8QET02TVV4:00000003 [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2024-12-12T13:36:29.9784617+07:00 0HN8QET02TVV4:00000003 [INF] Executed action "DemoSAP.Controllers.SapController.GetItems (DemoSAP)" in 25.7069ms (afa2e885)
+2024-12-12T13:36:29.9785633+07:00 0HN8QET02TVV4:00000003 [INF] Executed endpoint '"DemoSAP.Controllers.SapController.GetItems (DemoSAP)"' (99874f2b)
+2024-12-12T13:36:29.9786767+07:00 0HN8QET02TVV4:00000003 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/api/Sap""" - 200 null "application/json; charset=utf-8" 59.7056ms (74253ad3)
+2024-12-12T13:48:42.3320379+07:00  [INF] Now listening on: "http://localhost:5257" (d826f4b8)
+2024-12-12T13:48:42.3351224+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-12-12T13:48:42.3353848+07:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-12-12T13:48:42.3354056+07:00  [INF] Content root path: "D:\personal\git\DemoSAP" (cc26f24e)
+2024-12-12T13:48:44.5946641+07:00 0HN8QF42RBLTQ:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/""" - null null (d509f86a)
+2024-12-12T13:48:44.6193416+07:00 0HN8QF42RBLTQ:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/""" - 301 0 null 25.6293ms (74253ad3)
+2024-12-12T13:48:44.6214209+07:00 0HN8QF42RBLTQ:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/index.html""" - null null (d509f86a)
+2024-12-12T13:48:44.6612454+07:00 0HN8QF42RBLTQ:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/index.html""" - 200 null "text/html;charset=utf-8" 39.7599ms (74253ad3)
+2024-12-12T13:48:44.6717939+07:00 0HN8QF42RBLTQ:00000003 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger-ui.css""" - null null (d509f86a)
+2024-12-12T13:48:44.6723921+07:00 0HN8QF42RBLTR:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger-ui-bundle.js""" - null null (d509f86a)
+2024-12-12T13:48:44.6725271+07:00 0HN8QF42RBLTS:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger-ui-standalone-preset.js""" - null null (d509f86a)
+2024-12-12T13:48:44.6911103+07:00 0HN8QF42RBLTQ:00000003 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2024-12-12T13:48:44.6910958+07:00 0HN8QF42RBLTS:00000001 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2024-12-12T13:48:44.6926925+07:00 0HN8QF42RBLTS:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger-ui-standalone-preset.js""" - 200 230280 "text/javascript" 20.1003ms (74253ad3)
+2024-12-12T13:48:44.6926926+07:00 0HN8QF42RBLTQ:00000003 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger-ui.css""" - 200 152034 "text/css" 20.8682ms (74253ad3)
+2024-12-12T13:48:44.7048366+07:00 0HN8QF42RBLTR:00000001 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2024-12-12T13:48:44.7050105+07:00 0HN8QF42RBLTR:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger-ui-bundle.js""" - 200 1456926 "text/javascript" 32.5813ms (74253ad3)
+2024-12-12T13:48:44.8657457+07:00 0HN8QF42RBLTR:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-12-12T13:48:44.8836310+07:00 0HN8QF42RBLTS:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/favicon-32x32.png""" - null null (d509f86a)
+2024-12-12T13:48:44.8839795+07:00 0HN8QF42RBLTS:00000002 [INF] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"' (27b0a520)
+2024-12-12T13:48:44.8840377+07:00 0HN8QF42RBLTS:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/favicon-32x32.png""" - 200 628 "image/png" 0.4118ms (74253ad3)
+2024-12-12T13:48:44.9242703+07:00 0HN8QF42RBLTR:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 58.5386ms (74253ad3)
+2024-12-12T13:48:51.7219585+07:00  [INF] Application is shutting down... (90f52c38)
+2024-12-12T14:11:50.8172693+07:00  [INF] Now listening on: "http://localhost:5257" (d826f4b8)
+2024-12-12T14:11:50.8208992+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-12-12T14:11:50.8212705+07:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-12-12T14:11:50.8213099+07:00  [INF] Content root path: "D:\personal\git\DemoSAP" (cc26f24e)
+2024-12-12T14:11:50.9618974+07:00 0HN8QFH00LRAF:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/index.html""" - null null (d509f86a)
+2024-12-12T14:11:50.9962001+07:00 0HN8QFH00LRAF:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/index.html""" - 404 0 null 34.7376ms (74253ad3)
+2024-12-12T14:11:50.9983107+07:00 0HN8QFH00LRAF:00000001 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "http"://"localhost:5257""""/swagger/index.html", Response status code: 404 (e353595a)
+2024-12-12T14:11:55.1866166+07:00 0HN8QFH00LRAF:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/index.html""" - null null (d509f86a)
+2024-12-12T14:11:55.1881768+07:00 0HN8QFH00LRAF:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/index.html""" - 404 0 null 1.5608ms (74253ad3)
+2024-12-12T14:11:55.1882473+07:00 0HN8QFH00LRAF:00000002 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "http"://"localhost:5257""""/swagger/index.html", Response status code: 404 (e353595a)
+2024-12-12T14:11:55.6941828+07:00 0HN8QFH00LRAF:00000003 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/index.html""" - null null (d509f86a)
+2024-12-12T14:11:55.6957555+07:00 0HN8QFH00LRAF:00000003 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/index.html""" - 404 0 null 1.5785ms (74253ad3)
+2024-12-12T14:11:55.6958433+07:00 0HN8QFH00LRAF:00000003 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "http"://"localhost:5257""""/swagger/index.html", Response status code: 404 (e353595a)
+2024-12-12T14:11:55.8571451+07:00 0HN8QFH00LRAF:00000004 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/index.html""" - null null (d509f86a)
+2024-12-12T14:11:55.8574615+07:00 0HN8QFH00LRAF:00000004 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/index.html""" - 404 0 null 0.3469ms (74253ad3)
+2024-12-12T14:11:55.8575073+07:00 0HN8QFH00LRAF:00000004 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "http"://"localhost:5257""""/swagger/index.html", Response status code: 404 (e353595a)
+2024-12-12T14:11:56.0136467+07:00 0HN8QFH00LRAF:00000005 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/index.html""" - null null (d509f86a)
+2024-12-12T14:11:56.0139945+07:00 0HN8QFH00LRAF:00000005 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/index.html""" - 404 0 null 0.3553ms (74253ad3)
+2024-12-12T14:11:56.0140606+07:00 0HN8QFH00LRAF:00000005 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "http"://"localhost:5257""""/swagger/index.html", Response status code: 404 (e353595a)
+2024-12-12T14:11:56.1475611+07:00 0HN8QFH00LRAF:00000006 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/index.html""" - null null (d509f86a)
+2024-12-12T14:11:56.1481224+07:00 0HN8QFH00LRAF:00000006 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/index.html""" - 404 0 null 0.5737ms (74253ad3)
+2024-12-12T14:11:56.1481671+07:00 0HN8QFH00LRAF:00000006 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "http"://"localhost:5257""""/swagger/index.html", Response status code: 404 (e353595a)
+2024-12-12T14:12:02.8363998+07:00 0HN8QFH00LRAF:00000007 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/""" - null null (d509f86a)
+2024-12-12T14:12:02.8375447+07:00 0HN8QFH00LRAF:00000007 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/""" - 301 0 null 1.1344ms (74253ad3)
+2024-12-12T14:12:02.8397405+07:00 0HN8QFH00LRAF:00000008 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/index.html""" - null null (d509f86a)
+2024-12-12T14:12:02.8786824+07:00 0HN8QFH00LRAF:00000008 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/index.html""" - 200 null "text/html;charset=utf-8" 38.9193ms (74253ad3)
+2024-12-12T14:12:02.8916573+07:00 0HN8QFH00LRAF:00000009 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger-ui.css""" - null null (d509f86a)
+2024-12-12T14:12:02.8977144+07:00 0HN8QFH00LRAG:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger-ui-bundle.js""" - null null (d509f86a)
+2024-12-12T14:12:02.9013281+07:00 0HN8QFH00LRAH:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger-ui-standalone-preset.js""" - null null (d509f86a)
+2024-12-12T14:12:02.9368920+07:00 0HN8QFH00LRAH:00000001 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2024-12-12T14:12:02.9368953+07:00 0HN8QFH00LRAF:00000009 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2024-12-12T14:12:02.9389604+07:00 0HN8QFH00LRAF:00000009 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger-ui.css""" - 200 152034 "text/css" 47.2733ms (74253ad3)
+2024-12-12T14:12:02.9389604+07:00 0HN8QFH00LRAH:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger-ui-standalone-preset.js""" - 200 230280 "text/javascript" 38.2335ms (74253ad3)
+2024-12-12T14:12:02.9494204+07:00 0HN8QFH00LRAG:00000001 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2024-12-12T14:12:02.9495852+07:00 0HN8QFH00LRAG:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger-ui-bundle.js""" - 200 1456926 "text/javascript" 51.8411ms (74253ad3)
+2024-12-12T14:12:03.0883654+07:00 0HN8QFH00LRAG:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-12-12T14:12:03.1065721+07:00 0HN8QFH00LRAH:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/favicon-32x32.png""" - null null (d509f86a)
+2024-12-12T14:12:03.1071650+07:00 0HN8QFH00LRAH:00000002 [INF] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"' (27b0a520)
+2024-12-12T14:12:03.1072781+07:00 0HN8QFH00LRAH:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/favicon-32x32.png""" - 200 628 "image/png" 0.7028ms (74253ad3)
+2024-12-12T14:12:03.1662462+07:00 0HN8QFH00LRAG:00000002 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - DemoSAP.Controllers.SapController.GetItem (DemoSAP). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-12-12T14:12:03.1687527+07:00 0HN8QFH00LRAG:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - 500 null "text/plain; charset=utf-8" 80.4046ms (74253ad3)
+2024-12-12T14:12:08.5718695+07:00 0HN8QFH00LRAG:00000003 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/index.html""" - null null (d509f86a)
+2024-12-12T14:12:08.5725355+07:00 0HN8QFH00LRAG:00000003 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/index.html""" - 200 null "text/html;charset=utf-8" 0.696ms (74253ad3)
+2024-12-12T14:12:08.6480826+07:00 0HN8QFH00LRAG:00000004 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-12-12T14:12:08.6505880+07:00 0HN8QFH00LRAG:00000004 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - DemoSAP.Controllers.SapController.GetItem (DemoSAP). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-12-12T14:12:08.6510239+07:00 0HN8QFH00LRAG:00000004 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - 500 null "text/plain; charset=utf-8" 2.953ms (74253ad3)
+2024-12-12T14:12:09.2990809+07:00 0HN8QFH00LRAG:00000005 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/index.html""" - null null (d509f86a)
+2024-12-12T14:12:09.2994698+07:00 0HN8QFH00LRAG:00000005 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/index.html""" - 200 null "text/html;charset=utf-8" 0.4107ms (74253ad3)
+2024-12-12T14:12:09.3514206+07:00 0HN8QFH00LRAG:00000006 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-12-12T14:12:09.3539272+07:00 0HN8QFH00LRAG:00000006 [ERR] An unhandled exception has occurred while executing the request. (48a46595)
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Ambiguous HTTP method for action - DemoSAP.Controllers.SapController.GetItem (DemoSAP). Actions require an explicit HttpMethod binding for Swagger/OpenAPI 3.0
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerDocumentWithoutFilters(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwaggerAsync(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-12-12T14:12:09.3545412+07:00 0HN8QFH00LRAG:00000006 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - 500 null "text/plain; charset=utf-8" 3.123ms (74253ad3)
+2024-12-12T14:14:57.4103908+07:00  [INF] Now listening on: "http://localhost:5257" (d826f4b8)
+2024-12-12T14:14:57.4141288+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-12-12T14:14:57.4145746+07:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-12-12T14:14:57.4146159+07:00  [INF] Content root path: "D:\personal\git\DemoSAP" (cc26f24e)
+2024-12-12T14:14:57.5340108+07:00 0HN8QFINJVV8B:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger""" - null null (d509f86a)
+2024-12-12T14:14:57.5635530+07:00 0HN8QFINJVV8B:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger""" - 404 0 null 30.1355ms (74253ad3)
+2024-12-12T14:14:57.5653156+07:00 0HN8QFINJVV8B:00000001 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "http"://"localhost:5257""""/swagger", Response status code: 404 (e353595a)
+2024-12-12T14:15:01.3939999+07:00 0HN8QFINJVV8B:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/index.html""" - null null (d509f86a)
+2024-12-12T14:15:01.4340639+07:00 0HN8QFINJVV8B:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/index.html""" - 200 null "text/html;charset=utf-8" 40.0039ms (74253ad3)
+2024-12-12T14:15:01.5804789+07:00 0HN8QFINJVV8B:00000003 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-12-12T14:15:01.6414867+07:00 0HN8QFINJVV8B:00000003 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 61.0015ms (74253ad3)
+2024-12-12T14:15:48.9193711+07:00  [INF] Now listening on: "http://localhost:5257" (d826f4b8)
+2024-12-12T14:15:48.9228219+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-12-12T14:15:48.9232792+07:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-12-12T14:15:48.9233153+07:00  [INF] Content root path: "D:\personal\git\DemoSAP" (cc26f24e)
+2024-12-12T14:15:49.0526793+07:00 0HN8QFJ6V9SHJ:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/index.html""" - null null (d509f86a)
+2024-12-12T14:15:49.1294398+07:00 0HN8QFJ6V9SHJ:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/index.html""" - 200 null "text/html;charset=utf-8" 77.9384ms (74253ad3)
+2024-12-12T14:15:49.2510571+07:00 0HN8QFJ6V9SHJ:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-12-12T14:15:49.3076468+07:00 0HN8QFJ6V9SHJ:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 56.5799ms (74253ad3)
+2024-12-12T14:17:19.4768887+07:00  [INF] Now listening on: "http://localhost:5257" (d826f4b8)
+2024-12-12T14:17:19.4805214+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-12-12T14:17:19.4809142+07:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-12-12T14:17:19.4809439+07:00  [INF] Content root path: "D:\personal\git\DemoSAP" (cc26f24e)
+2024-12-12T14:17:19.6375591+07:00 0HN8QFK1V1Q13:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/index.html""" - null null (d509f86a)
+2024-12-12T14:17:19.7475560+07:00 0HN8QFK1V1Q13:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/index.html""" - 200 null "text/html;charset=utf-8" 111.1558ms (74253ad3)
+2024-12-12T14:17:19.8927957+07:00 0HN8QFK1V1Q13:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-12-12T14:17:19.9612778+07:00 0HN8QFK1V1Q13:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 68.4715ms (74253ad3)
+2024-12-12T14:35:18.6482771+07:00  [INF] Now listening on: "http://localhost:5257" (d826f4b8)
+2024-12-12T14:35:18.6526639+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-12-12T14:35:18.6531968+07:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-12-12T14:35:18.6532438+07:00  [INF] Content root path: "D:\personal\git\DemoSAP" (cc26f24e)
+2024-12-12T14:35:18.8208420+07:00 0HN8QFU3J0I17:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/index.html""" - null null (d509f86a)
+2024-12-12T14:35:18.9064865+07:00 0HN8QFU3J0I17:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/index.html""" - 200 null "text/html;charset=utf-8" 86.6313ms (74253ad3)
+2024-12-12T14:35:19.0371052+07:00 0HN8QFU3J0I17:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-12-12T14:35:19.1068413+07:00 0HN8QFU3J0I17:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 69.7168ms (74253ad3)
+2024-12-12T14:35:26.8095689+07:00 0HN8QFU3J0I17:00000003 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/api/Sap/GetItems""" - null null (d509f86a)
+2024-12-12T14:35:26.8149180+07:00 0HN8QFU3J0I17:00000003 [INF] Executing endpoint '"DemoSAP.Controllers.SapController.GetItems (DemoSAP)"' (500cc934)
+2024-12-12T14:35:26.8318359+07:00 0HN8QFU3J0I17:00000003 [INF] Route matched with "{action = \"GetItems\", controller = \"Sap\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetItems()" on controller "DemoSAP.Controllers.SapController" ("DemoSAP"). (122b2fdf)
+2024-12-12T14:35:26.8453004+07:00 0HN8QFU3J0I17:00000003 [INF] {
+  "Method": "GET",
+  "Headers": {
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Host": "localhost:5257",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en,th-TH;q=0.9,th;q=0.8",
+    "Cookie": "NEXT_LOCALE=th",
+    "Referer": "http://localhost:5257/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Google Chrome\u0022;v=\u0022131\u0022, \u0022Chromium\u0022;v=\u0022131\u0022, \u0022Not_A Brand\u0022;v=\u002224\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Dest": "empty"
+  },
+  "QueryParams": {},
+  "Body": null
+} (4a36bdd0)
+2024-12-12T14:35:26.8497626+07:00 0HN8QFU3J0I17:00000003 [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2024-12-12T14:35:26.8545461+07:00 0HN8QFU3J0I17:00000003 [INF] Executed action "DemoSAP.Controllers.SapController.GetItems (DemoSAP)" in 20.4301ms (afa2e885)
+2024-12-12T14:35:26.8546310+07:00 0HN8QFU3J0I17:00000003 [INF] Executed endpoint '"DemoSAP.Controllers.SapController.GetItems (DemoSAP)"' (99874f2b)
+2024-12-12T14:35:26.8547341+07:00 0HN8QFU3J0I17:00000003 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/api/Sap/GetItems""" - 200 null "application/json; charset=utf-8" 45.1939ms (74253ad3)
+2024-12-12T16:57:25.7078338+07:00  [INF] Now listening on: "http://localhost:5257" (d826f4b8)
+2024-12-12T16:57:25.7110929+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2024-12-12T16:57:25.7113900+07:00  [INF] Hosting environment: "Development" (bc5a1a4e)
+2024-12-12T16:57:25.7114206+07:00  [INF] Content root path: "D:\personal\git\DemoSAP" (cc26f24e)
+2024-12-12T16:57:28.3207615+07:00 0HN8QIDHIS31U:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/""" - null null (d509f86a)
+2024-12-12T16:57:28.3466553+07:00 0HN8QIDHIS31U:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/""" - 301 0 null 26.4367ms (74253ad3)
+2024-12-12T16:57:28.3498864+07:00 0HN8QIDHIS31U:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/index.html""" - null null (d509f86a)
+2024-12-12T16:57:28.3898901+07:00 0HN8QIDHIS31U:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/index.html""" - 200 null "text/html;charset=utf-8" 39.9243ms (74253ad3)
+2024-12-12T16:57:28.4130330+07:00 0HN8QIDHIS31U:00000003 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger-ui.css""" - null null (d509f86a)
+2024-12-12T16:57:28.4202395+07:00 0HN8QIDHIS320:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger-ui-standalone-preset.js""" - null null (d509f86a)
+2024-12-12T16:57:28.4202303+07:00 0HN8QIDHIS31V:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger-ui-bundle.js""" - null null (d509f86a)
+2024-12-12T16:57:28.4344751+07:00 0HN8QIDHIS31U:00000003 [INF] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"' (27b0a520)
+2024-12-12T16:57:28.4344751+07:00 0HN8QIDHIS320:00000001 [INF] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"' (27b0a520)
+2024-12-12T16:57:28.4374196+07:00 0HN8QIDHIS31U:00000003 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger-ui.css""" - 200 152034 "text/css" 24.2833ms (74253ad3)
+2024-12-12T16:57:28.4374197+07:00 0HN8QIDHIS320:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger-ui-standalone-preset.js""" - 200 230280 "text/javascript" 17.0596ms (74253ad3)
+2024-12-12T16:57:28.4560418+07:00 0HN8QIDHIS31V:00000001 [INF] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"' (27b0a520)
+2024-12-12T16:57:28.4562774+07:00 0HN8QIDHIS31V:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger-ui-bundle.js""" - 200 1456926 "text/javascript" 36.0566ms (74253ad3)
+2024-12-12T16:57:28.6573791+07:00 0HN8QIDHIS31V:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-12-12T16:57:28.6777051+07:00 0HN8QIDHIS320:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/favicon-32x32.png""" - null null (d509f86a)
+2024-12-12T16:57:28.6780396+07:00 0HN8QIDHIS320:00000002 [INF] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"' (27b0a520)
+2024-12-12T16:57:28.6781000+07:00 0HN8QIDHIS320:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/favicon-32x32.png""" - 200 628 "image/png" 0.4064ms (74253ad3)
+2024-12-12T16:57:28.7200890+07:00 0HN8QIDHIS31V:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 62.6615ms (74253ad3)
+2024-12-12T17:00:15.5863989+07:00 0HN8QIDHIS321:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-12-12T17:00:15.5887081+07:00 0HN8QIDHIS321:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 2.3247ms (74253ad3)
+2024-12-12T17:00:15.7151468+07:00 0HN8QIDHIS321:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/favicon.ico""" - null null (d509f86a)
+2024-12-12T17:00:15.7156902+07:00 0HN8QIDHIS321:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/favicon.ico""" - 404 0 null 0.5586ms (74253ad3)
+2024-12-12T17:00:15.7171549+07:00 0HN8QIDHIS321:00000002 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "http"://"localhost:5257""""/favicon.ico", Response status code: 404 (e353595a)
+2024-12-12T17:00:22.0416192+07:00 0HN8QIDHIS321:00000003 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/api/Sap/GetItems""" - null null (d509f86a)
+2024-12-12T17:00:22.0452156+07:00 0HN8QIDHIS321:00000003 [INF] Executing endpoint '"DemoSAP.Controllers.SapController.GetItems (DemoSAP)"' (500cc934)
+2024-12-12T17:00:22.0588697+07:00 0HN8QIDHIS321:00000003 [INF] Route matched with "{action = \"GetItems\", controller = \"Sap\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetItems()" on controller "DemoSAP.Controllers.SapController" ("DemoSAP"). (122b2fdf)
+2024-12-12T17:00:22.0697605+07:00 0HN8QIDHIS321:00000003 [INF] {
+  "Method": "GET",
+  "Headers": {
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Host": "localhost:5257",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9,th;q=0.8",
+    "Cookie": "_fbp=fb.0.1724225726732.548074398465159582; G_ENABLED_IDPS=google; koa.sess=eyJjb2RlVmVyaWZpZXIiOiJ5ZHJrUVo5MjVsRXdDR0hpR3Flb240UnphWndrRFhkUkNhRDRmb0I1dWdKIiwiX2V4cGlyZSI6MTczNDA4MDI0NzMyOCwiX21heEFnZSI6ODY0MDAwMDB9; koa.sess.sig=qSIGk6FXu2CpGrKAnVthIv680Qc",
+    "Referer": "http://localhost:5257/index.html",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Google Chrome\u0022;v=\u0022131\u0022, \u0022Chromium\u0022;v=\u0022131\u0022, \u0022Not_A Brand\u0022;v=\u002224\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Dest": "empty"
+  },
+  "QueryParams": {},
+  "Body": null
+} (5b4104ea)
+2024-12-12T17:00:22.0717077+07:00 0HN8QIDHIS321:00000003 [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2024-12-12T17:00:22.0762270+07:00 0HN8QIDHIS321:00000003 [INF] Executed action "DemoSAP.Controllers.SapController.GetItems (DemoSAP)" in 14.7761ms (afa2e885)
+2024-12-12T17:00:22.0763191+07:00 0HN8QIDHIS321:00000003 [INF] Executed endpoint '"DemoSAP.Controllers.SapController.GetItems (DemoSAP)"' (99874f2b)
+2024-12-12T17:00:22.0764282+07:00 0HN8QIDHIS321:00000003 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/api/Sap/GetItems""" - 200 null "application/json; charset=utf-8" 34.8964ms (74253ad3)
+2024-12-12T17:01:23.2408696+07:00 0HN8QIDHIS321:00000004 [INF] Request starting "HTTP/1.1" "POST" "http"://"localhost:5257""""/api/Sap/CreateItem""" - null 0 (d509f86a)
+2024-12-12T17:01:23.2419239+07:00 0HN8QIDHIS321:00000004 [INF] Executing endpoint '"DemoSAP.Controllers.SapController.CreateItem (DemoSAP)"' (500cc934)
+2024-12-12T17:01:23.2445636+07:00 0HN8QIDHIS321:00000004 [INF] Route matched with "{action = \"CreateItem\", controller = \"Sap\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateItem()" on controller "DemoSAP.Controllers.SapController" ("DemoSAP"). (122b2fdf)
+2024-12-12T17:01:23.2466241+07:00 0HN8QIDHIS321:00000004 [INF] {
+  "Method": "POST",
+  "Headers": {
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Host": "localhost:5257",
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept-Language": "en-US,en;q=0.9,th;q=0.8",
+    "Cookie": "_fbp=fb.0.1724225726732.548074398465159582; G_ENABLED_IDPS=google; koa.sess=eyJjb2RlVmVyaWZpZXIiOiJ5ZHJrUVo5MjVsRXdDR0hpR3Flb240UnphWndrRFhkUkNhRDRmb0I1dWdKIiwiX2V4cGlyZSI6MTczNDA4MDI0NzMyOCwiX21heEFnZSI6ODY0MDAwMDB9; koa.sess.sig=qSIGk6FXu2CpGrKAnVthIv680Qc",
+    "Origin": "http://localhost:5257",
+    "Referer": "http://localhost:5257/index.html",
+    "Content-Length": "0",
+    "sec-ch-ua-platform": "\u0022Windows\u0022",
+    "sec-ch-ua": "\u0022Google Chrome\u0022;v=\u0022131\u0022, \u0022Chromium\u0022;v=\u0022131\u0022, \u0022Not_A Brand\u0022;v=\u002224\u0022",
+    "sec-ch-ua-mobile": "?0",
+    "Sec-Fetch-Site": "same-origin",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Dest": "empty"
+  },
+  "QueryParams": {},
+  "Body": ""
+} (2ef1f9d3)
+2024-12-12T17:01:23.2470625+07:00 0HN8QIDHIS321:00000004 [INF] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType0`4[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'. (605b4265)
+2024-12-12T17:01:23.2473867+07:00 0HN8QIDHIS321:00000004 [INF] Executed action "DemoSAP.Controllers.SapController.CreateItem (DemoSAP)" in 2.781ms (afa2e885)
+2024-12-12T17:01:23.2474147+07:00 0HN8QIDHIS321:00000004 [INF] Executed endpoint '"DemoSAP.Controllers.SapController.CreateItem (DemoSAP)"' (99874f2b)
+2024-12-12T17:01:23.2476230+07:00 0HN8QIDHIS321:00000004 [INF] Request finished "HTTP/1.1" "POST" "http"://"localhost:5257""""/api/Sap/CreateItem""" - 200 null "application/json; charset=utf-8" 6.7873ms (74253ad3)
+2024-12-12T17:03:41.5072346+07:00 0HN8QIDHIS323:00000001 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/index.html""" - null null (d509f86a)
+2024-12-12T17:03:41.5078882+07:00 0HN8QIDHIS323:00000001 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/index.html""" - 200 null "text/html;charset=utf-8" 0.6676ms (74253ad3)
+2024-12-12T17:03:41.7657599+07:00 0HN8QIDHIS323:00000002 [INF] Request starting "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - null null (d509f86a)
+2024-12-12T17:03:41.7673144+07:00 0HN8QIDHIS323:00000002 [INF] Request finished "HTTP/1.1" "GET" "http"://"localhost:5257""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 1.5353ms (74253ad3)
+2024-12-12T18:38:33.5701367+07:00  [INF] Application is shutting down... (90f52c38)
